@@ -24,10 +24,11 @@ export default {
     created: async function(){
   
       const response = await axios.get(this.url)
-      
+
       this.pokemon.type = response.data.types[0].type.name
       this.pokemon.front = response.data.sprites.front_default
       this.pokemon.back = response.data.sprites.back_default
+      
         console.log(this.pokemon)
     },
 
