@@ -3,6 +3,11 @@
   <div class="logo">
   <img src="https://vibrant-yonath-715bf2.netlify.app/static/media/pokedex-logo.dc5fe4c4.svg" alt="">
   </div>
+
+  <div class="inp">
+  <input type="text" v-model="pokeName" placeholder="Digite o nome do pokemon">
+  </div>
+
 <div id="app" v-for="(pokemon,index) in pokemons" :key="index">
 
   <Pokemon :name="pokemon.name" :url="pokemon.url" :number="index"/>
@@ -22,7 +27,11 @@ export default {
 
     data(){
       return{
-        pokemons : []
+
+        pokemons : [],
+        filteredPokemon:[],
+        pokeName:'',
+
       }
     },
 
@@ -35,6 +44,13 @@ export default {
 
     console.log(this.pokemons)
   },
+
+  computed:{
+    check: function(){
+     this.pokemons.filter(poke => poke.name === this.pokeName)
+     return this.Pokemons
+    }
+  }
 
   }
 </script>
@@ -52,10 +68,31 @@ div.logo{
   width:100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .logo img{
   width:300px ;
+}
+
+.inp{
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 115, 0, 0.733) ;
+  height: 80px;
+}
+input{
+  height: 60px;
+  width:450px ;
+
+  border: none;
+  outline: none;
+  border-radius:10px;
+  padding: 1rem;
+
+  font-family:Lato;
+  font-weight: bold;
+  font-size: 12pt;
+
+
 }
 </style>
