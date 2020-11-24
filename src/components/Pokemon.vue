@@ -1,6 +1,6 @@
 <template>
   <div class="all" style="display:flex; align-items:center; justify-content:center; ">
-    <strong style="margin-right:5px; color:white;">{{number}}</strong>
+    <strong style="margin-right:5px; color:black;">{{number}}</strong>
 
     <div class="pokemon">
       <div class="img">
@@ -89,7 +89,6 @@ export default {
 <style>
 
 .all{
-  background: rgb(235, 235, 235);
 }
 
 .pokemon{
@@ -104,7 +103,7 @@ transform: translateX(15px);
 
 .img{
   text-align: center;
-  background: rgb(234, 246, 248);
+  background: rgb(0, 217, 255);
   border-radius: 10px 10px 0 0;
   margin-top: 10px;
   width:250px;
