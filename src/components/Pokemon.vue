@@ -103,7 +103,7 @@ transform: translateX(15px);
 
 .img{
   text-align: center;
-  background: rgb(0, 217, 255);
+  background: rgb(232, 246, 248);
   border-radius: 10px 10px 0 0;
   margin-top: 10px;
   width:250px;

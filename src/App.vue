@@ -8,7 +8,7 @@
   <input type="text" v-model="pokeName" placeholder="Digite o nome do pokemon">
   </div>
 
-<div id="app" v-for="(pokemon,index) in pokemons" :key="index">
+<div id="app" v-for="(pokemon,index) in check" :key="pokemon.name">
 
   <Pokemon :name="pokemon.name" :url="pokemon.url" :number="index"/>
 </div>
@@ -47,8 +47,13 @@ export default {
 
   computed:{
     check: function(){
-     this.pokemons.filter(poke => poke.name === this.pokeName)
-     return this.Pokemons
+     if(this.pokeName === ''){
+       return this.pokemons
+     } 
+
+    return this.pokemons.filter(poke=> poke.name.search(this.pokeName) > -1)
+     
+     
     }
   }
 
