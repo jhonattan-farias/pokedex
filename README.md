@@ -10,4 +10,4 @@
   
   **Foi criado também uma ferramenta de pesquisa do pokemon por nome. Bati bastante a cabeça pra fazer, mas meu brother yoyo me salvou no final. Quem quiser conhecer o instagram dele pesquisa lá ticomyoyo. Ele faz bastante conteudo legal sobre a área de ti com lives semanais.**
   
-  ## This was all folks :smile:
+  ## That was all folks :smile: :rabbit:
